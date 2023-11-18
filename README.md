@@ -20,6 +20,12 @@ sudo chmod 777 data
 cd data
 ```
 
+### Instances
+```bash
+aws ec2 start-instances --instance-ids i-05a13c4f0164a6168
+aws ec2 stop-instances --instance-ids i-05a13c4f0164a6168
+```
+
 ## s3
 ### cli key 
 ```bash
