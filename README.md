@@ -104,6 +104,22 @@ scp -i yaytest.pem ubuntu@10.888.8.88:/tmp/boringserver/tediouslogfile.tar.gz   
 ssh -i giantrobotdinosaur.pem -N -f -L 9992:127.0.0.1:8888 ubuntu@ec2-44-44-44-234.us-west-2.compute.amazonaws.com
 ```
 
+### Batch
+
+- EC2 Batch GPU Cloudformation - https://github.com/johnewart/ec2-batch-gpu-cloudformation/blob/master/gpu-ami-batch.yaml
+
+- Creating a Compute Resource - https://docs.aws.amazon.com/batch/latest/userguide/create-batch-ami.html
+
+- Get GPU AMI list - https://docs.aws.amazon.com/batch/latest/userguide/batch-gpu-ami.html
+- https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-versions.html#ecs-ami-versions-linux
+
+#### AWS Deep Learning Containers
+- https://github.com/aws/deep-learning-containers/blob/master/available_images.md
+- 7673104351884.dkr.ecr.us-east-1.amazonaws.com/tensorflow-training:1.15.5-cpu-py36-ubuntu18.04
+
+AWS Deep Learning Container login
+https://docs.aws.amazon.com/deep-learning-containers/latest/devguide/deep-learning-containers-custom-images.html
+
 
 ## s3
 ### cli key 
@@ -156,4 +172,5 @@ aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --i
     ]
 }
 ```
+
 
