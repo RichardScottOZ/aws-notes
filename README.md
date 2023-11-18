@@ -68,6 +68,11 @@ aws ec2 start-instances --instance-ids i-05a13c4f0164a6168
 aws ec2 stop-instances --instance-ids i-05a13c4f0164a6168
 ```
 
+### Connect
+```bash
+ssh -i robotspacezombie.pem ubuntu@44.444.4.4
+111
+
 ### Keep Yourself Alive
 - Don't want your sessions to do when you are cut off
 - Use screen or something similar
@@ -79,6 +84,17 @@ $ scp -i dumbkeyfilename.pem ubuntu@13.239.47.46:/home/ubuntu/annoying.yaml . an
 
 scp -i yaytest.pem ubuntu@10.888.8.88:/tmp/boringserver/tediouslogfile.tar.gz   .
 ```
+
+### Jupyter
+- Along these lines
+	- https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter.html
+- connecting to ubuntu ec2 for jupyter book - use right domain name - also use 127.0.0.1 not localhost as that fails
+- start jupyter in a session [after working out what ports you want re: above]
+- git bash
+```bash
+ssh -i giantrobotdinosaur.pem -N -f -L 9992:127.0.0.1:8888 ubuntu@ec2-44-44-44-234.us-west-2.compute.amazonaws.com
+```
+
 
 ## s3
 ### cli key 
