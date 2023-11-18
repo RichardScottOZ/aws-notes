@@ -29,6 +29,13 @@ aws ec2 start-instances --instance-ids i-05a13c4f0164a6168
 aws ec2 stop-instances --instance-ids i-05a13c4f0164a6168
 ```
 
+### Secure Copy
+```bash
+$ scp -i dumbkeyfilename.pem ubuntu@13.239.47.46:/home/ubuntu/annoying.yaml . annoying.yaml  
+
+scp -i yaytest.pem ubuntu@10.888.8.88:/tmp/boringserver/tediouslogfile.tar.gz   .
+```
+
 ## s3
 ### cli key 
 ```bash
