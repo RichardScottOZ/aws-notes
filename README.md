@@ -24,7 +24,7 @@ cd data
 ```
 
 ### Increasing Drive Size
-- after adjusting the volume, things like this
+- after adjusting the volume, things like this - depending on filesystem ext4, xfs etc
 ```bash
 sudo growpart /dev/xvda 1
 CHANGED: partition=1 start=2048 old: size=16775135 end=16777183 new: size=20969439,end=20971487
@@ -37,6 +37,28 @@ xvda    202:0    0  10G  0 disk
 We increased block storage, but we also need to increase filesystem:
 
 ~$ sudo resize2fs /dev/xvda1
+```
+
+or
+
+```
+gdisk
+parted
+
+check filetype sudo file -s /dev/nvme1n1
+sudo xfs_growfs -d /data
+
+growpart /dev/nvme0n1
+
+resize2fs /dev/nvme0n1p1
+resize2fs /dev/nvme0n1
+
+growpart /dev/nvme1n1
+
+resize2fs /dev/nvme1n1p1
+```
+
+
 
 ### Instances
 ```bash
