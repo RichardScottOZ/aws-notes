@@ -43,8 +43,10 @@ aws configure set default.s3.max_queue_size 100000
 ```bash
 - default pattern : exclude everything wildcard, include what you want
 - IT IS A VERY GOOD IDEA TO CHECK DELETIONS FIRST!
-aws s3 rm "s3://hopethesearenotimportant/rasters/rtant/rasters/" --recursive --exclude="*" --include="banana" --dryrun
-aws s3 rm "s3://hopethesearenotimportantrasters/" --recursive --exclude="*" --include="banana" --dryrun
+aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --include="*banana.tif" --dryrun
+(dryrun) delete: s3://hopethesearenotimportant/rasters/GIANT_MEGA_SUPER_GODZILLA_banana.tif
+
+aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --include="banana"
 ```
 
 ### bucket permissions
