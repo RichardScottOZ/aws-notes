@@ -23,6 +23,21 @@ sudo chmod 777 data
 cd data
 ```
 
+### Increasing Drive Size
+- after adjusting the volume, things like this
+```bash
+sudo growpart /dev/xvda 1
+CHANGED: partition=1 start=2048 old: size=16775135 end=16777183 new: size=20969439,end=20971487
+We can confirm that all the storage is allocated to xvda1 by listing block storages again:
+
+~$ sudo lsblk
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  10G  0 disk
+└─xvda1 202:1    0  10G  0 part /
+We increased block storage, but we also need to increase filesystem:
+
+~$ sudo resize2fs /dev/xvda1
+
 ### Instances
 ```bash
 aws ec2 start-instances --instance-ids i-05a13c4f0164a6168
