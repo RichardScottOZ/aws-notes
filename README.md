@@ -22,11 +22,19 @@ cd data
 
 ## s3
 ### cli key 
-- AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA AWS_SECRET_ACCESS_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA aws s3 ls
+```bash
+AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA AWS_SECRET_ACCESS_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA aws s3 ls
+```
 
-
+### configuration
+```
+aws configure set default.s3.max_concurrent_requests 1000
+aws configure set default.s3.max_queue_size 10000
+aws configure set default.s3.max_queue_size 100000
+```
 
 ### bucket permissions
+```python
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -52,3 +60,4 @@ cd data
         }
     ]
 }
+```
