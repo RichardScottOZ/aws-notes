@@ -1,6 +1,9 @@
 # AWS NOTES
 
 ## ec2
+### Windows
+- Git Bash is your friend!
+
 ### Drive Mounting
 - examples
 ```bash
