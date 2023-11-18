@@ -29,6 +29,11 @@ aws ec2 start-instances --instance-ids i-05a13c4f0164a6168
 aws ec2 stop-instances --instance-ids i-05a13c4f0164a6168
 ```
 
+### Keep Yourself Alive
+- Don't want your sessions to do when you are cut off
+- Use screen or something similar
+- https://stackoverflow.com/questions/32500498/how-to-make-a-process-run-on-aws-ec2-even-after-closing-the-local-machine
+
 ### Secure Copy
 ```bash
 $ scp -i dumbkeyfilename.pem ubuntu@13.239.47.46:/home/ubuntu/annoying.yaml . annoying.yaml  
