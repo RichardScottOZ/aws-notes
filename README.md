@@ -3,6 +3,8 @@
 ## ec2
 ### Windows
 - Git Bash is your friend!
+- unixutils latest is good too
+	- https://sourceforge.net/projects/unxutils/
 
 ### Drive Mounting
 - examples
