@@ -5,6 +5,13 @@
 - Git Bash is your friend!
 - unixutils latest is good too 
 	- https://sourceforge.net/projects/unxutils/
+	
+### Ubuntu
+- e.g. don't use these
+	- GDAL on Amazon Linux 2
+	- https://gist.github.com/abelcallejo/e75eb93d73db6f163b076d0232fc7d7e
+	- https://stackoverflow.com/questions/36772111/how-can-i-install-a-recent-version-of-gdal-on-amazon-linux/44907360#44907360
+	
 
 ### Drive Mounting
 - examples
@@ -82,7 +89,7 @@ ssh -i robotspacezombie.pem ubuntu@44.444.4.4
 
 ### Secure Copy
 ```bash
-$ scp -i dumbkeyfilename.pem ubuntu@13.239.47.46:/home/ubuntu/annoying.yaml . annoying.yaml  
+$ scp -i dumbkeyfilename.pem ubuntu@44.444.44.44:/home/ubuntu/annoying.yaml . annoying.yaml  
 
 scp -i yaytest.pem ubuntu@10.888.8.88:/tmp/boringserver/tediouslogfile.tar.gz   .
 ```
@@ -149,3 +156,4 @@ aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --i
     ]
 }
 ```
+
