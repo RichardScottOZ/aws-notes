@@ -58,6 +58,8 @@ growpart /dev/nvme1n1
 resize2fs /dev/nvme1n1p1
 ```
 
+- root volume size
+- https://www.dolthub.com/blog/2022-05-02-use-more-than-2TB-ubuntu-ec2/
 
 
 ### Instances
