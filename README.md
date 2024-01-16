@@ -173,4 +173,7 @@ aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --i
 }
 ```
 
-
+### launch template type permissions
+-  https://medium.com/@rajganeshp/aws-lab-ec2-access-to-s3-using-iam-role-cedefbbbc118
+-  add for role and IAM:PassRole for user too
+-  
