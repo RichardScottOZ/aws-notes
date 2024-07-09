@@ -177,3 +177,7 @@ aws s3 rm "s3://hopethesearenotimportant/rasters/" --recursive --exclude="*" --i
 -  https://medium.com/@rajganeshp/aws-lab-ec2-access-to-s3-using-iam-role-cedefbbbc118
 -  add for role and IAM:PassRole for user too
 -  
+
+### ami activation
+- source /home/ubuntu/.local/bin/activate /home/ubuntu/anaconda3/envs/tensorflow2_p39
+- newer versions - maybe only ap-southeast-2 have to check fail on launch with just source activate tensorflow2_p39
